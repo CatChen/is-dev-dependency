@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "tsc": "^2.0.4"
+  },
+  "name": "is-dev-dependency",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatChen/is-dev-dependency.git"
+  },
+  "author": "catchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CatChen/is-dev-dependency/issues"
+  },
+  "homepage": "https://github.com/CatChen/is-dev-dependency#readme"
+}
