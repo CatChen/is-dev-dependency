@@ -81,6 +81,9 @@ jobs:
     name: Publish
     needs: [release]
     if: ${{ needs.release.outputs.skipped != 'true' }}
+    permissions:
+      contents: read
+      packages: write
     uses: ./.github/workflows/publish.yml
     secrets: inherit
     with:
