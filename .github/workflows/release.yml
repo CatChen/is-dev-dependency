@@ -48,6 +48,10 @@ jobs:
     uses: ./.github/workflows/eslint.yml
 
   codeql:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     uses: ./.github/workflows/codeql.yml
 
   release:
