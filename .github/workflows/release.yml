@@ -59,6 +59,8 @@ jobs:
     needs: [build, eslint, codeql]
     concurrency: release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       tag: ${{ steps.release.outputs.tag }}
       skipped: ${{ steps.release.outputs.skipped }}
