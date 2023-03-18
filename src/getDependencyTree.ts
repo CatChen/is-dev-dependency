@@ -1,7 +1,6 @@
-import { buildDepTreeFromFiles } from 'snyk-nodejs-lockfile-parser';
-import { resolve } from 'node:path';
 import { existsSync } from 'node:fs';
-
+import { resolve } from 'node:path';
+import { buildDepTreeFromFiles } from 'snyk-nodejs-lockfile-parser';
 import type { PkgTree } from 'snyk-nodejs-lockfile-parser';
 
 /**

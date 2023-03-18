@@ -1,15 +1,14 @@
 {
-  "devDependencies": {
-    "tsc": "^2.0.4",
-    "typescript": "^5.0.2"
-  },
   "name": "is-dev-dependency",
   "description": "",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "yarn tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c .eslintrc.json src",
+    "preversion": "rm -rf lib && yarn && yarn build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +22,31 @@
   "homepage": "https://github.com/CatChen/is-dev-dependency#readme",
   "dependencies": {
     "snyk-nodejs-lockfile-parser": "^1.48.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "importOrder": [
+      "<THIRD_PARTY_MODULES>",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
   }
 }
