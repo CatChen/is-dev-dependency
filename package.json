@@ -6,7 +6,8 @@
   "name": "is-dev-dependency",
   "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/CatChen/is-dev-dependency/issues"
   },
-  "homepage": "https://github.com/CatChen/is-dev-dependency#readme"
+  "homepage": "https://github.com/CatChen/is-dev-dependency#readme",
+  "dependencies": {
+    "snyk-nodejs-lockfile-parser": "^1.48.0"
+  }
 }
