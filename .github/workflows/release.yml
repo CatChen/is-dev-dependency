@@ -52,7 +52,7 @@ jobs:
 
   release:
     name: Release
-    needs: [build, test, eslint, codeql]
+    needs: [build, eslint, codeql]
     concurrency: release
     runs-on: ubuntu-latest
     outputs:

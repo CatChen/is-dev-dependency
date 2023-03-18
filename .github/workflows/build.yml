@@ -13,6 +13,8 @@ on:
         required: false
         type: string
 
+permissions: write-all
+
 jobs:
   build:
     name: Build
