@@ -13,24 +13,10 @@ on:
         required: false
         type: string
 
-permissions: write-all
-
 jobs:
   build:
     name: Build
-    if: |-
-      ${{
-        (
-          github.actor == 'dependabot[bot]' && 
-          github.event_name != 'push' &&
-          github.event_name != 'pull_request'
-        ) || (
-          github.actor != 'dependabot[bot]' &&
-          github.event_name != 'workflow_run'
-        )
-      }}
     runs-on: ubuntu-latest
-    permissions: write-all
 
     strategy:
       matrix:
