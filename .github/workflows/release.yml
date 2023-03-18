@@ -69,7 +69,6 @@ jobs:
         with:
           release-type: ${{ inputs.release-type || 'patch' }}
           prerelease: ${{ inputs.prerelease || false }}
-          update-shorthand-release: true
           dry-run: ${{ inputs.dry-run || false }}
           skip-if-no-diff: ${{ inputs.skip-if-no-diff || true }}
           diff-targets: ${{ inputs.diff-targets || 'dist/**/*' }}
@@ -78,33 +77,8 @@ jobs:
     name: Publish
     needs: [release]
     if: ${{ needs.release.outputs.skipped != 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        if: ${{ !inputs.dry-run }}
-        with:
-          ref: ${{ needs.release.outputs.tag }}
-      - uses: actions/checkout@v3
-        if: ${{ inputs.dry-run }}
-        with:
-          ref: ${{ github.ref_name || github.ref }}
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          check-latest: true
-          registry-url: https://registry.npmjs.org/
-      - env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          DRY_RUN: ${{ inputs.dry-run || false }}
-        run: |
-          yarn install
-          yarn build
-          npm whoami
-          npm config ls -l
-          if [[ "$DRY_RUN" = true ]]
-          then
-            npm publish --dry-run
-          else
-            npm publish
-          fi
+    uses: ./.github/workflows/publish.yml
+    secrets: inherit
+    with:
+      tag: ${{ needs.release.outputs.tag }}
+      dry-run: ${{ inputs.dry-run || false }}
