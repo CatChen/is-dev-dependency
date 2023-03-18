@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.2"
   },
   "name": "is-dev-dependency",
   "description": "",
