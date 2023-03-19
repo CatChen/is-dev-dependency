@@ -59,7 +59,7 @@ jobs:
 
   release:
     name: Release
-    needs: [build, eslint, codeql]
+    needs: [build, test, eslint, codeql]
     concurrency: release
     runs-on: ubuntu-latest
     permissions:
@@ -80,7 +80,7 @@ jobs:
           prerelease: ${{ inputs.prerelease || true }}
           dry-run: ${{ inputs.dry-run || false }}
           skip-if-no-diff: ${{ inputs.skip-if-no-diff || true }}
-          diff-targets: ${{ inputs.diff-targets || 'dist/**/*' }}
+          diff-targets: ${{ inputs.diff-targets || '{lib/**/*,package.json,tsconfig.json,README.md,LICENSE}' }}
 
   publish:
     name: Publish
