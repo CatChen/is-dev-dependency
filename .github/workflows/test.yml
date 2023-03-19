@@ -17,19 +17,34 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
       - uses: actions/checkout@v3
         if: ${{ github.event_name != 'workflow_run' }}
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.ref || github.head_ref || github.base_ref }}
 
       - uses: actions/checkout@v3
         if: ${{ github.event_name == 'workflow_run' }}
         with:
           ref: ${{ github.event.workflow_run.head_branch }}
 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+
       - name: Install dependencies
         run: yarn
 
       - name: Test
-        run: yarn test src --coverage
+        run: yarn test src --coverage --collectCoverageFrom=src/**/*.ts
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
