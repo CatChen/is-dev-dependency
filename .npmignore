@@ -25,6 +25,7 @@
 .prettierignore
 .prettierrc.json
 .eslintrc.json
+.vscode
 
 npm-debug.log*
 yarn-debug.log*
