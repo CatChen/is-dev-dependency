@@ -21,7 +21,7 @@ on:
       prerelease:
         description: 'Prerelease'
         required: true
-        default: false
+        default: true
         type: boolean
       skip-if-no-diff:
         description: 'Skip if no diff'
@@ -77,7 +77,7 @@ jobs:
         uses: CatChen/node-package-release-action@v1
         with:
           release-type: ${{ inputs.release-type || 'patch' }}
-          prerelease: ${{ inputs.prerelease || false }}
+          prerelease: ${{ inputs.prerelease || true }}
           dry-run: ${{ inputs.dry-run || false }}
           skip-if-no-diff: ${{ inputs.skip-if-no-diff || true }}
           diff-targets: ${{ inputs.diff-targets || 'dist/**/*' }}
