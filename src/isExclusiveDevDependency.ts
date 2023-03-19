@@ -6,7 +6,7 @@ import { findDependency } from './findDependency';
  * @param name A package name.
  * @returns An indicator of whether the given package name is used exclusively as a dev dependency.
  */
-export async function isDevDependency(
+export async function isExclusiveDevDependency(
   root: string,
   name: string,
 ): Promise<boolean> {
