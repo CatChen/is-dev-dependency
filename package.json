@@ -25,6 +25,11 @@
     "url": "https://github.com/CatChen/is-dev-dependency/issues"
   },
   "homepage": "https://github.com/CatChen/is-dev-dependency#readme",
+  "funding": "https://github.com/CatChen/is-dev-dependency?sponsor=1",
+  "keywords": [
+    "dependency",
+    "package"
+  ],
   "engines": {
     "node": ">=14"
   },
