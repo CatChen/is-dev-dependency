@@ -44,6 +44,9 @@ jobs:
     uses: ./.github/workflows/build.yml
     secrets: inherit
 
+  test:
+    uses: ./.github/workflows/test.yml
+
   eslint:
     uses: ./.github/workflows/eslint.yml
 
