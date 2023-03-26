@@ -22,7 +22,7 @@ updates:
       - npm-npmjs
       - npm-registry-npm-pkg-github-com-catchen
     labels:
-      - pass2ship
+      - accept2ship
 
   - package-ecosystem: 'github-actions'
     directory: '/'
