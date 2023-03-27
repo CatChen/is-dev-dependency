@@ -3,7 +3,7 @@ import type { PkgTree } from 'snyk-nodejs-lockfile-parser';
 import { getDependencyTree } from './getDependencyTree';
 import type { NodePackage } from './getDependencyTree';
 
-export type Dependency = PkgTree['dependencies'][keyof PkgTree['dependencies']];
+type Dependency = PkgTree['dependencies'][keyof PkgTree['dependencies']];
 
 function findDependencyFromPackageTree(
   tree: Dependency,
