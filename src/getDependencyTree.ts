@@ -14,7 +14,7 @@ type NpmPackageFiles = {
 };
 type YarnPackageFiles = {
   packageJsonContent: string;
-  YarnLockContent: string;
+  yarnLockContent: string;
 };
 export type NodePackage = PackagePath | NpmPackageFiles | YarnPackageFiles;
 
@@ -54,9 +54,9 @@ export async function getDependencyTree(
   } else {
     return buildDepTree(
       nodePackage.packageJsonContent,
-      nodePackage.YarnLockContent,
+      nodePackage.yarnLockContent,
       true,
-      nodePackage.YarnLockContent.includes('__metadata')
+      nodePackage.yarnLockContent.includes('__metadata')
         ? LockfileType.yarn2
         : LockfileType.yarn,
     );
