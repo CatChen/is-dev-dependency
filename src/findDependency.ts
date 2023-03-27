@@ -1,6 +1,7 @@
 import type { PkgTree } from 'snyk-nodejs-lockfile-parser';
 
 import { getDependencyTree } from './getDependencyTree';
+import type { NodePackage } from './getDependencyTree';
 
 export type Dependency = PkgTree['dependencies'][keyof PkgTree['dependencies']];
 
@@ -28,9 +29,9 @@ function findDependencyFromPackageTree(
  * @returns An array of all dependency instances of the given package name.
  */
 export async function findDependency(
-  root: string,
+  nodePackage: NodePackage,
   name: string,
 ): Promise<Array<Dependency>> {
-  const graph = await getDependencyTree(root);
+  const graph = await getDependencyTree(nodePackage);
   return findDependencyFromPackageTree(graph, name);
 }

@@ -1,4 +1,5 @@
 import { findDependency } from './findDependency';
+import type { NodePackage } from './getDependencyTree';
 
 /**
  * Determines if a given package name is used as a dependency in a given package directory.
@@ -7,9 +8,9 @@ import { findDependency } from './findDependency';
  * @returns An indicator of whether the given package name is used as a dependency.
  */
 export async function isDependency(
-  root: string,
+  nodePackage: NodePackage,
   name: string,
 ): Promise<boolean> {
-  const dependencies = await findDependency(root, name);
+  const dependencies = await findDependency(nodePackage, name);
   return dependencies.length > 0;
 }
