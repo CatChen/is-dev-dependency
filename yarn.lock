@@ -3573,9 +3573,9 @@ snyk-config@^5.0.0:
     minimist "^1.2.5"
 
 snyk-nodejs-lockfile-parser@^1.48.0:
-  version "1.49.0"
-  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.49.0.tgz#5185e4ce0f471a989cc22ea9c0bd0d6fd5770403"
-  integrity sha512-73iqwHB8YSWex/PTx+TRUwtNPyKn5wP4n/kxEPbX9EfN3uSIcw6mSKiLm8gSKl5gtf8hcP0R0f1tBFjjdzQvRQ==
+  version "1.50.0"
+  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.50.0.tgz#ea9cf89353e03405cbd8c0e109942249987c51de"
+  integrity sha512-3yjpx/sKGk09XJLZorRuKht6OrdVOAb0SsLj+hyFoiLCEVPk5h1Hj6MBSa6HOaNpTedmSvWrCqmNWrjnOY0ljQ==
   dependencies:
     "@snyk/dep-graph" "^2.3.0"
     "@snyk/graphlib" "2.1.9-patch.3"
