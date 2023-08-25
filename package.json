@@ -31,7 +31,7 @@
     "package"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "dependencies": {
     "snyk-nodejs-lockfile-parser": "^1.48.0"
