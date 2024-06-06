@@ -3207,7 +3207,7 @@ merge2@^1.3.0, merge2@^1.4.1:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-micromatch@^4.0.2, micromatch@^4.0.4, micromatch@^4.0.5, micromatch@~4.0.7:
+micromatch@^4.0.2, micromatch@^4.0.4, micromatch@^4.0.7, micromatch@~4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.7.tgz#33e8190d9fe474a9895525f5618eee136d46c2e5"
   integrity sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==
@@ -3796,9 +3796,9 @@ snyk-config@^5.0.0:
     minimist "^1.2.5"
 
 snyk-nodejs-lockfile-parser@^1.48.0:
-  version "1.56.1"
-  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.56.1.tgz#ffe6dc1de54bbe312a19081100a71f411e884ec1"
-  integrity sha512-vwHeb8P66evpi/PHfrFP11b7xiGHamGa1cejTGPLGWOcPpM0T8f4p4CMX8NSBDkn4gHVAOyoxm2gPuzEelpuZw==
+  version "1.57.0"
+  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.57.0.tgz#b944a3c04bbe7265f0ac604db75f3918b0f9307c"
+  integrity sha512-6n4+6L9tHAgw1ZlfsLvH7ihJGh+BcTSlIsHILebA7S/nK5hPm79Ee2+ElPd/jCZdEkRo6CURvzg/WZRnXpaq8g==
   dependencies:
     "@snyk/dep-graph" "^2.3.0"
     "@snyk/error-catalog-nodejs-public" "^5.16.0"
@@ -3812,7 +3812,7 @@ snyk-nodejs-lockfile-parser@^1.48.0:
     lodash.flatmap "^4.5.0"
     lodash.isempty "^4.4.0"
     lodash.topairs "^4.3.0"
-    micromatch "^4.0.5"
+    micromatch "^4.0.7"
     p-map "^4.0.0"
     semver "^7.6.0"
     snyk-config "^5.0.0"
