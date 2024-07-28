@@ -17,6 +17,9 @@ updates:
       time: '03:00'
       timezone: US/Pacific
     groups:
+      types:
+        patterns:
+          - '@types/*'
       development-dependencies:
         dependency-type: "development"
     reviewers:
