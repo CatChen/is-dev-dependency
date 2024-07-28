@@ -4,10 +4,11 @@
   "version": "0.1.8",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "yarn tsc",
     "test": "jest",
-    "lint": "eslint -c .eslintrc.json src",
+    "lint": "eslint -c eslint.config.js",
     "registry:github": "cat package.json | json -e 'this.name = \"@CatChen/\" + this.name; this.publishConfig = {}; this.publishConfig.registry = \"https://npm.pkg.github.com/\"' > package.github.json && mv -f package.github.json package.json",
     "registry:npm": "cat package.json | json -e 'this.name = this.name.replace(new RegExp(\"^@CatChen/\"), \"\"); this.publishConfig = undefined' > package.npm.json && mv -f package.npm.json package.json",
     "prepublish": "rm -rf lib && yarn build",
@@ -37,6 +38,8 @@
     "snyk-nodejs-lockfile-parser": "^1.48.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
     "@jest/globals": "^29.5.0",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/jest": "^29.5.0",
@@ -52,7 +55,8 @@
     "prettier": "^3.0.2",
     "ts-jest": "^29.0.5",
     "tsc": "^2.0.4",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "typescript-eslint": "^7.17.0"
   },
   "optionalDependencies": {
     "husky": "^9.0.2",
