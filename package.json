@@ -35,7 +35,7 @@
     "node": ">=16"
   },
   "dependencies": {
-    "snyk-nodejs-lockfile-parser": "^1.48.0"
+    "snyk-nodejs-lockfile-parser": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
